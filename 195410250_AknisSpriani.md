@@ -1,5 +1,5 @@
 # UTS-PBD-AknisSapriani-195410250
-NO 1
+NO 1<br>
 3 DBMS yang bisa digunakan untuk mengelola big data
  a. RDBMS = IBM DB2, MySQL, Microsoft SQL Server, dan Microsoft Access.
  b. ORDBMS= Oracle Database , PostgreSQL , dan Microsoft SQL Server .
