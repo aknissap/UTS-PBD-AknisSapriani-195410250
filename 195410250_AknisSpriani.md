@@ -55,7 +55,7 @@ db = mysql.connector.connect(
 cursor = db.cursor()
 cursor.execute("CREATE DATABASE toko_mainan")
 print("Database berhasil dibuat!")
-![](PBD/1.png)<br>
+![](PBD/1.PNG)<br>
 10. Setelah itu menjalankan create_db.py dengan Python 3.
 python3 create_db.py
 Maka akan ada keterangan database dibuat
