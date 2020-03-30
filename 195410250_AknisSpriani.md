@@ -1,10 +1,13 @@
 # UTS-PBD-AknisSapriani-195410250
 NO 1
+
+====================================================================================================
 3 DBMS yang bisa digunakan untuk mengelola big data
  a. RDBMS = IBM DB2, MySQL, Microsoft SQL Server, dan Microsoft Access.
  b. ORDBMS= Oracle Database , PostgreSQL , dan Microsoft SQL Server .
  c. OODBMS= Database berorientasi objek Versant , Objectivity / DB , ObjectDB , dan ObjectStore .
  
+=====================================================================================================
 NO 2 
 Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD 
 untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, 
