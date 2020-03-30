@@ -15,7 +15,6 @@ Membuat Halaman CRUD Python dan MySQL dengan menggunakan ubuntu
    Ketik peritah berikut untuk menginstal modul mysql untuk Python.
    $ sudo apt install python3-mysql.connector ATAU pip3 install mysql-connector
 2. Koneksi ke MySQL dan membuat connect.py
-===========================================
 import mysql.connector
 db = mysql.connector.connect(
   host="localhost",
@@ -24,43 +23,31 @@ db = mysql.connector.connect(
 )
 if db.is_connected():
   print("Berhasil terhubung ke database")
- ===========================================
 3. Jalankan connect.py dengan Python 3.
    $python3 connect.py
    Ketika berhasil akan ada keterangan berhasil terhubung Ke Database
 4. Kita membutuhkan modul mysql.connector untuk membuat koneksi ke MySQL.
    $import mysql.connector
     Lalu kita membuat koneksi dengan memanggil fungsi connect() dan parameter host, user, dan passwd.
-============================================
 db = mysql.connector.connect(
   host="localhost",
   user="admin",
   passwd="admin"
 )
-============================================
 5. Jika menggunakan XAMPP, menggunakan parameter seperti dibawah:
-============================================
 db = mysql.connector.connect(
   host="localhost",
   user="root",
   passwd="")
-============================================
 6. Karena user default di XAMPP adalah root dan di sana biasanya tidak menggunakan password lalu cek koneksi.
-============================================
 if db.is_connected():
   print("Berhasil terhubung ke database")
-============================================
 7. Membuat Database
 Membuat objek cursor kita tinggal buat seperti dibawah:
-====================
 cursor = db.cursor()
-====================
 8. Lalu untuk mengeksekusi query, tinggal panggil method execute() dengan parameter string query.
-===================
 cursor.execute(sql)
-===================
 9. Membuat file baru bernama create_db.py. Kemudian isi dengan kode berikut:
-===========================================
 import mysql.connector
 db = mysql.connector.connect(
   host="localhost",
@@ -70,25 +57,18 @@ db = mysql.connector.connect(
 cursor = db.cursor()
 cursor.execute("CREATE DATABASE toko_mainan")
 print("Database berhasil dibuat!")
-===========================================
 10. Setelah itu menjalankan create_db.py dengan Python 3.
-=======================
 python3 create_db.py
-=======================
 Maka akan ada keterangan database dibuat
 11. Membuat database toko mainan
-===============================
 db = mysql.connector.connect(
   host="localhost",
   user="admin",
   passwd="admin",
   database="toko_mainan"
 )
-===============================
 12. Membuat file baru bernama create_table.py
-=============================================
 import mysql.connector
-
 db = mysql.connector.connect(
   host="localhost",
   user="admin",
@@ -105,14 +85,11 @@ sql = """CREATE TABLE customers (
 """
 cursor.execute(sql)
 print("Tabel customers berhasil dibuat!")
-==============================================
 13. Akan ada keterangan tabel customor telah dibuat
 python3 create_table.py
 
 14. Membuat file baru bernama insert_one.py kemudian isi dengan kode berikut:
-============================================================
 import mysql.connector
-
 db = mysql.connector.connect(
   host="localhost",
   user="admin",
@@ -128,19 +105,13 @@ cursor.execute(sql, val)
 db.commit()
 
 print("{} data ditambahkan".format(cursor.rowcount))
-============================================================
 15. Kode untuk insert data 
-========================================================
 sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
 val = ("Dian", "Mataram")
 cursor.execute(sql, val)
-
 db.commit()
-=========================================================
 16. Menampilkan data dengan membuat file baru bernama select.py kemudia isi dengan kode berikut:
-========================================================
 import mysql.connector
-
 db = mysql.connector.connect(
   host="localhost",
   user="admin",
@@ -156,18 +127,14 @@ results = cursor.fetchall()
 
 for data in results:
   print(data)
-===========================================================
 17. Update Data dengan membuat file baru bernama update.py. Kemudian isi dengan kode berikut:
-============================================================
 import mysql.connector
-
 db = mysql.connector.connect(
   host="localhost",
   user="admin",
   passwd="admin",
   database="toko_mainan"
 )
-
 cursor = db.cursor()
 sql = "UPDATE customers SET name=%s, address=%s WHERE customer_id=%s"
 val = ("Ardianta", "Lombok", 1)
@@ -176,11 +143,8 @@ cursor.execute(sql, val)
 db.commit()
 
 print("{} data diubah".format(cursor.rowcount))
-===========================================================
 18. Menghapus Data dengan membuat file baru bernama delete.py, kemudian isi dengan kode berikut:
-===========================================================
 import mysql.connector
-
 db = mysql.connector.connect(
   host="localhost",
   user="admin",
@@ -196,9 +160,7 @@ cursor.execute(sql, val)
 db.commit()
 
 print("{} data dihapus".format(cursor.rowcount))
-============================================================
 19 . Aplikasi CRUDS berbasis CLI dengan membuat file baru bernama app_cruds.py, kemudian isi dengan kode berikut:
-==========================================================
 import mysql.connector
 import os
 
@@ -302,9 +264,7 @@ def show_menu(db):
     exit()
   else:
     print("Menu salah!")
-
-
 if __name__ == "__main__":
+
   while(True):
     show_menu(db)
-====================================================================
