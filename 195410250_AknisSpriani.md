@@ -8,11 +8,11 @@ NO 2 <br>
 Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, 
 jelaskan kira-kira bagaimana arsitektur dari solusi big data menggunakan DBMS tersebut, gambarkan diagramnya.
 <br>
-Membuat Halaman CRUD Python dan MySQL dengan menggunakan ubuntu
+Membuat Halaman CRUD Python dan MySQL dengan menggunakan ubuntu kasus toko mainan
 1. Instalasi Modul MySQL Connector
-   Ketik peritah berikut untuk menginstal modul mysql untuk Python.
+   Ketik peritah berikut untuk menginstal modul mysql untuk Python.<br>
    $ sudo apt install python3-mysql.connector ATAU pip3 install mysql-connector
-2. Koneksi ke MySQL dan membuat connect.py
+2. Koneksi ke MySQL dan membuat connect.py<br>
 import mysql.connector
 db = mysql.connector.connect(
   host="localhost",
@@ -21,12 +21,12 @@ db = mysql.connector.connect(
 )
 if db.is_connected():
   print("Berhasil terhubung ke database")
-3. Jalankan connect.py dengan Python 3.
+3. Jalankan connect.py dengan Python 3.<br>
    $python3 connect.py
    Ketika berhasil akan ada keterangan berhasil terhubung Ke Database
-4. Kita membutuhkan modul mysql.connector untuk membuat koneksi ke MySQL.
+4. Kita membutuhkan modul mysql.connector untuk membuat koneksi ke MySQL.<br>
    $import mysql.connector
-    Lalu kita membuat koneksi dengan memanggil fungsi connect() dan parameter host, user, dan passwd.
+    Lalu kita membuat koneksi dengan memanggil fungsi connect() dan parameter host, user, dan passwd.<br>
 db = mysql.connector.connect(
   host="localhost",
   user="admin",
@@ -37,15 +37,15 @@ db = mysql.connector.connect(
   host="localhost",
   user="root",
   passwd="")
-6. Karena user default di XAMPP adalah root dan di sana biasanya tidak menggunakan password lalu cek koneksi.
+6. Karena user default di XAMPP adalah root dan di sana biasanya tidak menggunakan password lalu cek koneksi.<br>
 if db.is_connected():
   print("Berhasil terhubung ke database")
 7. Membuat Database
-Membuat objek cursor kita tinggal buat seperti dibawah:
+Membuat objek cursor kita tinggal buat seperti dibawah:<br>
 cursor = db.cursor()
 8. Lalu untuk mengeksekusi query, tinggal panggil method execute() dengan parameter string query.
 cursor.execute(sql)
-9. Membuat file baru bernama create_db.py. Kemudian isi dengan kode berikut:
+9. Membuat file baru bernama create_db.py. Kemudian isi dengan kode berikut:<br>
 import mysql.connector
 db = mysql.connector.connect(
   host="localhost",
