@@ -86,7 +86,7 @@ cursor.execute(sql)
 print("Tabel customers berhasil dibuat!")
 <br>
 13. Akan ada keterangan tabel customor telah dibuat
-python3 create_table.py
+python3 create_table.py<br>
 ![](PBD/2.PNG)<br>
 14. Membuat file baru bernama insert_one.py kemudian isi dengan kode berikut:<br>
 import mysql.connector
@@ -143,6 +143,7 @@ cursor.execute(sql, val)
 db.commit()
 <br>
 print("{} data diubah".format(cursor.rowcount))<br>
+![](PBD/6.PNG)<br>
 18. Menghapus Data dengan membuat file baru bernama delete.py, kemudian isi dengan kode berikut:<br>
 import mysql.connector
 db = mysql.connector.connect(
