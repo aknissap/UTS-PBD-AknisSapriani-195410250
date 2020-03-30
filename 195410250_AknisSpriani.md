@@ -4,11 +4,10 @@ NO 1<br>
  a. RDBMS = IBM DB2, MySQL, Microsoft SQL Server, dan Microsoft Access.<br>
  b. ORDBMS= Oracle Database , PostgreSQL , dan Microsoft SQL Server .<br>
  c. OODBMS= Database berorientasi objek Versant , Objectivity / DB , ObjectDB , dan ObjectStore .<br>
-NO 2 
-Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD 
-untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, 
+NO 2 <br>
+Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, 
 jelaskan kira-kira bagaimana arsitektur dari solusi big data menggunakan DBMS tersebut, gambarkan diagramnya.
-
+<br>
 Membuat Halaman CRUD Python dan MySQL dengan menggunakan ubuntu
 1. Instalasi Modul MySQL Connector
    Ketik peritah berikut untuk menginstal modul mysql untuk Python.
