@@ -13,33 +13,33 @@ Membuat Halaman CRUD Python dan MySQL dengan menggunakan ubuntu kasus toko maina
    Ketik peritah berikut untuk menginstal modul mysql untuk Python.<br>
    $ sudo apt install python3-mysql.connector ATAU pip3 install mysql-connector
 2. Koneksi ke MySQL dan membuat connect.py<br>
-import mysql.connector
-db = mysql.connector.connect(
-  host="localhost",
-  user="admin",
-  passwd="admin"
-)
-if db.is_connected():
-  print("Berhasil terhubung ke database")
+import mysql.connector<br>
+db = mysql.connector.connect(<br>
+  host="localhost",<br>
+  user="admin",<br>
+  passwd="admin"<br>
+)<br>
+if db.is_connected()<br>
+  print("Berhasil terhubung ke database")<br>
 3. Jalankan connect.py dengan Python 3.<br>
-   $python3 connect.py
-   Ketika berhasil akan ada keterangan berhasil terhubung Ke Database
+   $python3 connect.py<br>
+   Ketika berhasil akan ada keterangan berhasil terhubung Ke Database<br>
 4. Kita membutuhkan modul mysql.connector untuk membuat koneksi ke MySQL.<br>
-   $import mysql.connector
+   $import mysql.connector<br>
     Lalu kita membuat koneksi dengan memanggil fungsi connect() dan parameter host, user, dan passwd.<br>
-db = mysql.connector.connect(
+db = mysql.connector.connect(<br>
   host="localhost",
   user="admin",
   passwd="admin"
-)
-5. Jika menggunakan XAMPP, menggunakan parameter seperti dibawah:
-db = mysql.connector.connect(
+)<br>
+5. Jika menggunakan XAMPP, menggunakan parameter seperti dibawah:<br>
+db = mysql.connector.connect(<br>
   host="localhost",
   user="root",
-  passwd="")
+  passwd="")<br>
 6. Karena user default di XAMPP adalah root dan di sana biasanya tidak menggunakan password lalu cek koneksi.<br>
 if db.is_connected():
-  print("Berhasil terhubung ke database")
+  print("Berhasil terhubung ke database")<br>
 7. Membuat Database
 Membuat objek cursor kita tinggal buat seperti dibawah:<br>
 cursor = db.cursor()
